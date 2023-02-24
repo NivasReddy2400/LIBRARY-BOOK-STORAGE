@@ -27,7 +27,8 @@ class UI {
     static deleteBook(el){
         if(el.classList.contains('delete')){
             el.parentElement.parentElement.remove();
-            // Store.removeBook(el.parentElement.parentElement.previousElementSibling.);
+            Store.removeBook(el.parentElement.parentElement.childNodes[4].innerHTML);
+            console.log(el.parentElement.parentElement.childNodes[4].innerHTML)
             UI.showAlert('Book Deleted','danger');
         }
     }
